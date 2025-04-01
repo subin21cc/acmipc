@@ -8,22 +8,8 @@ public class Main {
         int B = sc.nextInt();
         int C = sc.nextInt();
 
-        int b = B;
-        int digits = 0;
-        int a= A;
-
-        while (b != 0) {
-            b /= 10;
-            digits++;
-        }
-
-        for (int i = 0; i < digits; i++) {
-            a *= 10;
-        }
-
         System.out.println(A + B - C);
-        System.out.println(a + B - C);
-
-
+        int logB = (int)Math.log10(B) + 1;
+        System.out.println(A*(int)Math.pow(10, logB) + B - C);
     }
 }
